@@ -15,7 +15,8 @@ with open(model_path, "rb") as f:
 def home():
     return jsonify({
         "status": "House Price Prediction API is running",
-        "usage": "POST /predict with { area_sqft: number, bedrooms: number }"
+        "usage": "POST /predict with { area_sqft: number, bedrooms: number }",
+        "total_samples":501
     })
 
 @app.route("/predict", methods=["POST"])
